@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClickCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQw-gP-Mhz">
+                                <rect key="frame" x="155" y="438" width="104" height="30"/>
+                                <state key="normal" title="Increase Count"/>
+                                <connections>
+                                    <action selector="increaseCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C4g-V9-kJA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6h1-94-yBv">
+                                <rect key="frame" x="151.5" y="476" width="111" height="30"/>
+                                <state key="normal" title="Decrease Count"/>
+                                <connections>
+                                    <action selector="decreaseCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XWn-lf-7Ka"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-Uf-g5d">
+                                <rect key="frame" x="194.5" y="276" width="25" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wQw-gP-Mhz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5c9-jG-UwQ"/>
+                            <constraint firstItem="wQw-gP-Mhz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Alp-dF-T0H"/>
+                            <constraint firstItem="jSn-Uf-g5d" firstAttribute="centerX" secondItem="wQw-gP-Mhz" secondAttribute="centerX" id="EFN-io-Zla"/>
+                            <constraint firstItem="6h1-94-yBv" firstAttribute="centerX" secondItem="wQw-gP-Mhz" secondAttribute="centerX" id="FOb-ra-ist"/>
+                            <constraint firstItem="wQw-gP-Mhz" firstAttribute="top" secondItem="jSn-Uf-g5d" secondAttribute="bottom" constant="114" id="QkH-Rz-hxx"/>
+                            <constraint firstItem="6h1-94-yBv" firstAttribute="top" secondItem="wQw-gP-Mhz" secondAttribute="bottom" constant="8" symbolic="YES" id="Xoc-FA-tSK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="jSn-Uf-g5d" id="L0s-1z-1N7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
